@@ -497,7 +497,7 @@ The preimage of $\Gen \subseteq \WR$ along the point $T \to \WR$ is the subpresh
 
 
 
-\subsection{Application: the complement of a Cartier divisor}
+\subsection{Application: the complement of a Cartier divisor}\label{ss:complementcartierdiv}
 
 Let $\bar S'$ be a variety and consider a divisor $D \subseteq \bar S'$ which is the sum $D = \sum D_i$ of $n$ prime Cartier divisors $D_i$. The local rings $\OO_{\bar S', \eta_i}$ are all discrete valuation rings by our assumptions, where $\eta_i$ is the generic point of $D_i$. 
 \Leo{This last part is all we really need. }
@@ -529,9 +529,16 @@ of the invertible sheaves $\OO_{\bar S'}(kD)$. Let $\bar S' \to S$ be a finite f
 
 Fix number fields $L/K$. Choose a finitely generated sub-$\ZZ_K$-algebra $B \subseteq L$. Write $\bar B$ for the integral subring 
 \[\bar B \coloneqq B \cap \bar \ZZ \qquad \subseteq \bar \QQ.\]
-Let $S' \coloneqq \Spec B$, $\bar S' \coloneqq \Spec \bar B$. 
+
+Let $S' \coloneqq \Spec B$, $\bar S' \coloneqq \Spec \bar B$. They are both one-dimensional rings, not necessarily smooth. The complement $D \coloneqq \bar S' \setminus S'$ is a finite set of points. If they are not smooth points of $\bar S'$, we can blow up $\bar S'$ at $D$ to make them be. 
+\Leo{Do we need to do this? Are they already smooth points of $\bar S'$?}
+Then $D \subseteq \bar S'$ is a Cartier divisor and we can apply Section \S \ref{ss:complementcartierdiv}. 
 
 
+
+\begin{question}
+    Does the above apply to noncommutative algebras $\OO_{S'}/\OO_S$? I think so. It seems to only depend on the $\OO_S$-module structure. 
+\end{question}
 
 
 
