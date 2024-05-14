@@ -1,0 +1,886 @@
+\documentclass[11pt,reqno]{amsart}
+%\newlength\tindent
+%\setlength{\tindent}{\parindent}
+%\setlength{\parindent}{0pt}
+%\renewcommand{\indent}{\hspace*{\tindent} \bigskip}
+
+\usepackage{setspace}
+\usepackage[margin=1in]{geometry}
+\usepackage[hang,flushmargin,symbol*]{footmisc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage[labelformat=simple,labelfont={}]{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows,shapes,positioning}
+\usetikzlibrary{patterns}
+\usepackage{url}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{mathrsfs}
+
+\usepackage{verbatim}
+
+\usepackage{subfiles}
+
+
+\usepackage[colorinlistoftodos, loadshadowlibrary]{todonotes}
+%\usepackage[disable]{todonotes}
+
+\setlength{\marginparwidth}{.8in}
+
+\usepackage{dashbox}
+\newcommand\dboxed[1]{\dbox{\ensuremath{#1}}}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{situation}[theorem]{Situation}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{desiderata}[theorem]{Desiderata}
+\newtheorem{warning}[theorem]{Warning}
+
+
+
+
+
+
+%\newtheorem{case}[theorem]{Case}
+
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{hyperref}
+\usepackage{ mathdots }
+\usepackage{dutchcal}
+\usepackage{verbatim}
+\usepackage{amsmath,amsthm}
+\usepackage{extarrows}
+
+%Lets me use if then statements and create separate moduli of curves commands for if there is or is no input
+\usepackage{xparse}
+
+
+
+\newcommand{\BFjet}[1]{J^{BF}_{#1}}
+
+
+
+%Comment out this package to make labels invisible
+\usepackage{showlabels}
+
+\usepackage{multirow}
+\usepackage{multicol}
+
+%strikethrough text
+\usepackage[normalem]{ulem}
+%strikethrough underlines in math mode unless you do this stupid modification:
+
+
+
+\newcommand{\scr}[1]{\ensuremath{\mathscr{#1}}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newcommand{\msout}[1]{\text{\sout{\ensuremath{#1}}}}
+
+
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\NN}{{\mathbb{N}}}
+\newcommand{\QQ}{{\mathbb{Q}}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\MM}{{M}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Aff}{{\mathbb{A}}}
+\newcommand{\PP}{\mathbb{P}}
+
+\newcommand{\GG}{\mathbb{G}}
+
+\newcommand{\Gtrop}{\GG_{trop}}
+\newcommand{\Glog}{\GG_{log}}
+
+\newcommand{\fanskel}[1]{{\text{Sk}^{#1}}}
+
+\newcommand{\nn}[1]{{\mathscr{N}_{#1}}}
+\newcommand{\N}[1]{{N_{#1}}}
+\newcommand{\Nl}[1]{{N_{#1}^{\ell}}}
+\newcommand{\Nlstrict}[1]{{N_{#1}^{\msout{\ell}}}}
+
+\newcommand{\Div}{{\text{Div}}}
+
+
+\newcommand{\inc}{\rm inc}
+\newcommand{\ft}{\rm ft}
+
+\newcommand{\lHD}{{\rm HD}^\ell}
+
+
+
+
+
+\newcommand{\Spec}{{\rm{Spec}\:}}
+\newcommand{\SSpec}[1]{{\underline{\rm{Spec}}_{#1}\:}}
+\newcommand{\Proj}{{{\rmProj}\:}}
+\newcommand{\PProj}{\underline{\text{Proj}}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\HHom}{\underline{{\rm Hom}}}
+\newcommand{\lHHom}{\underline{\text{Hom}}^\ell}
+\newcommand{\Isom}{\text{Isom}}
+\newcommand{\IIsom}{\underline{\text{Isom}}}
+\newcommand{\EExt}{\underline{\text{Ext}}}
+\newcommand{\TTor}{\text{Tor}}
+\newcommand{\Der}{\text{Der}}
+\newcommand{\Exal}{\text{Exal}}
+\newcommand{\Ext}{\text{Ext}}
+\newcommand{\Mext}{\text{MExt}}
+\newcommand{\hh}[1]{\mathcal{h}_{#1}}
+\newcommand{\vH}{\check{H}}
+\newcommand{\inpt}{{\underline{\phantom{ab}}}}
+\newcommand{\ccx}[1]{{\mathbb{L}_{#1}}}
+\newcommand{\ccxd}[1]{{\mathbb{L}^\Delta_{#1}}}
+\newcommand{\lccx}[1]{{\mathbb{L}^\ell_{#1}}}
+\newcommand{\lgabcx}[1]{{\mathbb{L}^G_{#1}}}
+
+\newcommand{\Con}[1]{\text{Const}_{#1}}
+
+\newcommand{\gp}[1]{#1^{\rm gp}}
+\newcommand{\vfc}[2]{ {[{#1}, {#2}]^{vir}} }
+\newcommand{\lvfc}[2]{ {[{#1}, {#2}]^{\ell vir}} }
+
+\newcommand{\glob}{\mathcal{V}}
+\newcommand{\rectglob}{\mathcal{W}}
+
+
+
+\newcommand{\ev}{\hat \wedge}
+
+
+
+\def\lcm{\operatorname{lcm}}
+\def\supp{\operatorname{supp}}
+\def\ord{\operatorname{ord}}
+
+\newcommand{\Cl}[1]{{C_{#1}^\ell}}
+\newcommand{\Clstrict}[1]{{C_{#1}^{\msout{\ell}}}}
+\newcommand{\C}[1]{C_{#1}}
+
+\newcommand{\DNC}[1]{{\widetilde{M}_{#1}}}
+
+\newcommand{\Tl}[1]{{T^{\ell}_{#1}}}
+\newcommand{\lkah}[1]{\Omega^\ell_{#1}}
+\newcommand{\kah}[1]{\Omega_{#1}}
+\newcommand{\Log}{{\mathcal{L}og}}
+\newcommand{\Tor}{{\mathscr{T}}}
+\newcommand{\lpb}{{\arrow[dr, phantom, very near start, "\ulcorner \ell"]}}
+\newcommand{\lpbstrict}{{\arrow[dr, phantom, very near start, "\ulcorner \msout{\ell}"]}}
+\newcommand{\pb}{{\arrow[dr, phantom, very near start, "\ulcorner"]}}
+
+\newcommand{\num}[1]{\langle #1 \rangle}
+
+%fixing tilde and hat
+\renewcommand{\tilde}[1]{\widetilde{#1}}
+\renewcommand{\hat}[1]{\widehat{#1}}
+
+
+\newcommand{\stquot}[1]{\left[ #1 \right]}
+
+
+\newcommand{\lct}{{\rm lct}}
+
+
+
+
+\def\overnorm#1{\overline{#1}\vphantom{#1}}
+
+\renewcommand{\bar}[1]{\ensuremath{\overnorm{#1}}}
+
+\newcommand{\Ms}{{\overline{M}_{g, n}}}
+\newcommand{\Msi}[1]{{\overline{M}_{g, n} (#1)}}
+\newcommand{\Msg}[1]{{\overline{M}_{\Gamma} (#1)}}
+%to make $M_{g, n+m}$ look good
+\newcommand{\Msp}[1]{{\overline{M}_{g, n+#1}}}
+\newcommand{\Mspecific}[1]{\overline{M}_{#1}}
+
+\newcommand{\Ml}{{\mathscr{M}^\ell_{g, n}}}
+\newcommand{\Mli}[1]{{\mathscr{M}^\ell_{g, n} (#1)}}
+\newcommand{\Mlg}[1]{{\mathscr{M}^\ell_{\Gamma} (#1)}}
+
+
+\newcommand{\point}{{\overline{o}}}
+
+
+
+\newcommand{\Mprel}{{\mathfrak{M}_{g, n}}}
+
+
+\newcommand{\Aut}{\underline{\text{Aut}}}
+
+
+\newcommand{\Tc}{{\mathscr{T}}}
+
+
+
+\newcommand{\val}[1]{{#1}^{val}}
+\newcommand{\rval}[1]{{#1}^{\infty val}}
+
+\newcommand{\CDiv}[1]{\text{CDiv}(#1)}
+\newcommand{\WDiv}[1]{\text{WDiv}(#1)}
+
+\newcommand{\lCDiv}[1]{\text{CDiv}^\ell(#1)}
+\newcommand{\lWDiv}[1]{\text{WDiv}^\ell(#1)}
+
+
+\def\Cone{\operatorname{Cone}}
+
+\newcommand{\WP}{\cal{WP}}
+\newcommand{\WE}{\cal{WE}}
+
+
+
+\newcommand{\UU}{{\mathcal{U}}}
+\newcommand{\UUU}{{\widetilde{\mathcal{U}}}}
+
+\newcommand{\Sym}{\text{Sym}\,}
+
+\newcommand{\DS}[1]{P_{#1}}
+
+
+\newcommand{\longequals}{\xlongequal{\: \:}}
+\newcommand{\coker}{\text{coker}}
+\newcommand{\action}{\:\rotatebox[origin=c]{-90}{$\circlearrowright$}\:}
+\newcommand{\Split}{\text{Split}}
+\newcommand{\colim}{\text{colim}}
+\newcommand{\et}{{\text{\'et}}}
+
+%commands in case jonathan doesn't like my terminology
+\newcommand{\lpot}{{Log POT}\,}
+\newcommand{\lvirt}{{Log VFC}\,}
+
+
+%brackets
+\usepackage{stmaryrd}
+\newcommand{\adj}[1]{\llbracket #1 \rrbracket}
+
+
+
+%jets and log jets
+\newcommand{\ljet}[2]{\Delta_{#2}^{(#1)}}
+\newcommand{\tljet}[2]{\scr D_{#2}^{(#1)}}
+\newcommand{\jet}[1]{\Delta_{#1}}
+
+%(log) Jet Spaces
+\newcommand{\ljsp}[2]{J^{(#1)}_{#2}}
+\newcommand{\tljsp}[2]{\scr J^{(#1)}_{#2}}
+\newcommand{\ljspnonfs}[2]{S^{(#1)}_{#2}}
+\newcommand{\jsp}[1]{J_{#1}}
+\newcommand{\tjsp}[1]{\scr J_{#1}}
+
+\newcommand{\FF}{\mathbb F}
+
+\newcommand{\usch}[1]{{#1}^\circ}
+
+\newcommand{\WR}{\cal R}
+\newcommand{\WRc}{\hat{\cal R}}
+\newcommand{\Gen}{\cal M}
+
+
+
+\newcommand{\smet}{\Acute{e}t}
+
+\newcommand{\bra}[1]{\left[{#1}\right]}
+
+
+
+\usepackage{bm}
+\usepackage{xspace}
+%Names for different log structures on log jets
+%don't use this -- it's deprecated. Just use DIV with a number
+\newcommand{\BF}{\ensuremath{\boldsymbol{BF}}\xspace}
+\newcommand{\HOL}{\ensuremath{\boldsymbol{HOL}}\xspace}
+\newcommand{\DIV}[1]{\ensuremath{\boldsymbol{DIV}_{#1}}\xspace}
+
+
+\newcommand{\AF}[1][{}]{\Theta_{{#1}}}
+\newcommand{\af}[1][{}]{\AF[#1]}
+
+
+
+\newcommand{\cal}[1]{\ensuremath{\mathcal{#1}}}
+
+
+\newcommand{\pt}{\Spec k}
+
+\newcommand{\VV}{\mathbb{V}}
+
+\newcommand{\bb}[1]{\ensuremath{\mathbb{#1}}}
+
+\newcommand{\rk}{{\rm rk}}
+
+
+\newcommand{\dobib}{
+	\onlyinsubfile{
+		\bibliographystyle{alpha}%Used BibTeX style is unsrt
+		\bibliography{zbib}}}
+
+
+
+
+\newcommand{\klvar}[1]{K^{log}_0({\rm Var}_{#1})}
+\newcommand{\ktropvar}[1]{K^{trop}_0({\rm Var}_{#1})}
+\newcommand{\otherklvar}[1]{K_0({\rm Log}_{#1})}
+
+
+\newcommand{\klbitt}[1]{K^{log Bitt}_0({\rm Var}_{#1})}
+
+
+\newcommand{\ordkvar}[1]{K_0({\rm Var}_{#1})}
+
+
+\newcommand{\LL}{\mathbb{L}}
+
+\newcommand{\Cones}{(Cones)}
+\newcommand{\Mons}{(Mon)}
+\newcommand{\longsimeq}{\overset{\sim}{\longrightarrow}}
+
+\newcommand{\HS}{{\rm HS}}
+
+\newcommand{\jl}[2]{#1_{#2}^\ell}
+
+
+
+\newcommand{\Leo}[2][inline]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1,shadow,author=Leo]{#2}} %Todo notes for LEO. 
+
+\newcommand{\TdF}[2][inline]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1,shadow,author=Tommaso]{#2}} %Todo notes for Tommaso. 
+
+
+
+\newcommand{\KN}[1]{#1^{KN}}
+
+\newcommand{\floor}[1]{\left\lfloor {#1} \right \rfloor}
+
+
+\newcommand{\lmu}{\mu^\ell}
+
+\title{Open monogeneity}
+\author{Everybody}
+\date{\today}
+
+\begin{document}
+	
+\maketitle
+
+
+\section{Take 2}
+
+Fix an affine map $S' \to S$ of schemes and $X \to S$ a quasiprojective morphism. Usually, $S' = \Spec \ZZ_L$ and $S = \Spec \ZZ_K$ are the rings of integers in an extension $L/K$ of number fields. The target $X \to S$ is often $\Aff^1_S \to S$, the affine line. Sometimes we consider $X = \Aff^n_S$ or $\PP^n_S$ as needed. 
+
+
+\begin{definition}
+	The Weil restriction $\WR_{S'/S, X}$ is the sheaf on $S$-schemes $T$ whose value is the set of maps $\theta$ making the triangle commute:
+	\begin{equation}\label{eqn:weilrestn}
+		\begin{tikzcd}
+			T \times_S S' \ar[rr, dashed, "\theta"] \ar[dr] 		&		&X \times_S T \ar[dl] 		\\
+			&T.
+		\end{tikzcd}
+	\end{equation}
+	The subpresheaf $\Gen_{S'/S, X} \subseteq \WR_{S'/S, X}$ is given by triangles \eqref{eqn:weilrestn} such that $\theta$ is a closed immersion. Any of the subscripts can be omitted if confusion is impossible. 
+\end{definition}
+
+
+
+\begin{example}
+    Suppose $S' = \Spec \ZZ_L$ and $S = \Spec \ZZ_K$ are the rings of integers in an extension of number fields $L/K$ and take $X = \Aff^1_S$. Then $\WR$ assigns to open sets $D(f) = \Spec \ZZ_K \bra{\dfrac{1}{f}}$ the set of elements 
+    \[
+    \theta \in \ZZ_L\bra{\dfrac{1}{f}}.    
+    \]
+    Given a local integral basis 
+    \[\ZZ_L\bra{\dfrac{1}{f}} \simeq \bigoplus \ZZ_K\bra{\dfrac{1}{f}} \cdot \alpha_i,\]
+    the Weil restriction can be identified with affine space $\Aff^n_{D(f)}$. In general, $\WR \to S$ is an affine bundle. 
+
+    The locus $\Gen \subseteq \WR$ is the locus where $\theta$ generates:
+    \[\ZZ_L \bra{\dfrac{1}{f}} = \ZZ_K \bra{\theta, \dfrac{1}{f}}.\]
+    I.e., the set of monogenerators. 
+\end{example}
+
+
+If $S' \to S$ is a finite flat map with $S$ noetherian, the presheaves $\Gen \subseteq \WR$ are representable by schemes \cite{monogen}. The point of this article is to consider a wider range of $S'/S$. Without the finite flat assumption, we need not have an integral basis
+\[\OO_{S'} \neq \bigoplus \OO_S \cdot \alpha_i,\]
+even locally in $S$. 
+
+
+\subsection{Openness of $\Gen \subseteq \WR$ for filtered algebras}
+
+Consider a point $T \to \WR$ as in \eqref{eqn:weilrestn}. Write $T' \coloneqq T \times_S S'$ and suppose $X \to S$ is affine. Consider the map 
+\[\theta : \OO_X \to \OO_{T'}\]
+given by the point $T \to \WR$. 
+
+
+Choose a filtration 
+\[\cdots \subseteq \OO_{T'}^{-1} \subseteq \OO_{T'}^0 \subseteq \OO_{T'}^1 \subseteq \cdots \qquad \subseteq \OO_{T'}\]
+of $\OO_{T'}$ by finite type, quasicoherent $\OO_T$-modules exhibiting $\OO_{T'}$ as a filtered union 
+\[\OO_{T'} = \bigcup \OO_{T'}^k.\]
+
+
+\begin{remark}
+    There always exists such a filtration. The diagram of all finite type, quasi-coherent sub-$\OO_T$-modules of $\OO_{T'}$ is filtered, and filtered diagrams admit cofinal directed subdiagrams. 
+\end{remark}
+
+
+Write $\theta_k$ for the restriction of $\theta$ to the $k$th filtered piece: 
+\[
+\begin{tikzcd}
+\OO_X^k \ar[r] \ar[d, swap, "\theta_k"] \pb         &\OO_X \ar[d, "\theta"]      \\
+\OO_{T'}^k \ar[r]      &\OO_{T'}.   
+\end{tikzcd}    
+\]
+Write $T_k \subseteq T$ for the subpresheaf of $T$ on which $\theta_k$ restricts to be surjective. 
+
+
+\begin{lemma}
+    In the above situation, the subpresheaf $T_k \subseteq T$ is representable by an open subscheme of $T$. 
+\end{lemma}
+
+
+\begin{proof}
+    The map $\theta_k$ is a map of $\OO_S$-modules. It is surjective when its cokernel $C_k$ vanishes: 
+	\[
+	\OO_X^k \to \OO_{T'}^k \to C_k \to 0.	
+	\]
+	The cokernel $C_k$ is a finite type, quasicoherent $\OO_S$ module. Then \cite[056J]{stacks} shows its support $\supp C_k$ is closed. Its complement is $T_k$.    
+\end{proof}
+
+
+
+The preimage of $\Gen \subseteq \WR$ along the point $T \to \WR$ is the subpresheaf of $T$ on which $\theta$ itself is surjective. It is the intersection of all the open subsets where $\theta_k$ is surjective:
+\[\Gen \times_{\WR} T = \bigcap_k T_k.\]
+
+
+
+\begin{corollary}\label{cor:stableGenopen}
+    If the filtration stabilizes eventually 
+    \[\OO_{T'}^k = \OO_{T'}^{k+1}, \qquad k \gg 0\]
+    or if $\OO_{T'}$ is generated as a ring by any of its submodules $\OO_{T'}^k$, then $\Gen \subseteq \WR$ is open. 
+\end{corollary}
+
+
+
+
+\subsection{Application: the complement of a Cartier divisor}
+
+Let $\bar S'$ be a variety and consider a divisor $D \subseteq \bar S'$ which is the sum $D = \sum D_i$ of $n$ prime Cartier divisors $D_i$. The local rings $\OO_{\bar S', \eta_i}$ are all discrete valuation rings by our assumptions, where $\eta_i$ is the generic point of $D_i$. 
+\Leo{This last part is all we really need. }
+
+
+\begin{example}
+    In characteristic zero, every separated variety $S'$ admits an open immersion $S' \subseteq \bar S'$ by Nagata's compactification and resolution of singularities of the boundary $\bar S' \setminus S'$. 
+\end{example}
+
+
+Let $S' \coloneqq \bar S' \setminus D$ be the complement of the divisor. The structure sheaf is the filtered union
+\[\OO_{S'} = \bigcup_k \OO_{\bar S'}(kD) \qquad \subseteq K(\bar S')\]
+of the invertible sheaves $\OO_{\bar S'}(kD)$. Let $\bar S' \to S$ be a finite flat map. 
+
+
+\begin{corollary}
+    In the above setting, the subpresheaf $\Gen \subseteq \WR$ is representable by an open immersion. 
+\end{corollary}
+
+
+\begin{proof}
+    The ring $\OO_{S'}$ is generated by the sub $\OO_S$-module $\OO_{\bar S'}(D)$, so we can apply Corollary \ref{cor:stableGenopen}. 
+\end{proof}
+
+
+
+
+\subsection{Example: finitely generated subalgebras of number fields}
+
+Fix number fields $L/K$. Choose a finitely generated sub-$\ZZ_K$-algebra $B \subseteq L$. Write $\bar B$ for the integral subring 
+\[\bar B \coloneqq B \cap \bar \ZZ \qquad \subseteq \bar \QQ.\]
+Let $S' \coloneqq \Spec B$, $\bar S' \coloneqq \Spec \bar B$. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\section{Introduction}
+
+
+The below is overkill -- the case $\OO_{S'} = \OO_{\bar S'} \bra{\dfrac{1}{f}}$ is simpler because it suffices to generate the module
+\[\dfrac{1}{f} \OO_{\bar S'}\]
+inside of it, which generates it as a ring. 
+
+But the below is more general -- it applies to any $\OO_{S'}$ which is a filtered union of (finite?) locally free modules. All flat algebras are filtered colimits of \emph{finite} locally frees by Lazard's theorem. Lazard's theorem is for modules, but it works here also for modules. Could this apply to monogeneity of flat algebras? At least it cuts it out inside the Weil restriction $\WR_{S'/S, X}$, which might be infinite or crazy. 
+
+Theorem B of \url{https://arxiv.org/pdf/1109.0439.pdf} gives a Lazard-type theorem if the base $S$ is separated, noetherian, and smooth. I'm confused though -- in SGA4, Deligne gives a sort of Lazard theorem on arbitrary topoi. \cite[Th\'eor\`eme V.8.2.12]{sga4}. Flat modules are \emph{locally cofiltered} colimits of finite locally frees. \url{http://www.normalesup.org/~forgogozo/SGA4/tomes/SGA4.pdf}
+
+
+
+
+\subsection{The Weil restriction}
+
+
+Let $p : S' \to S$ be a surjective quasifinite morphism between one-dimensional irreducible smooth varieties (finite type, separated, reduced, irreducible schemes). It admits an open immersion into a finite map $\bar S' \to S$ with $\bar S'$ smooth: $\OO_{\bar S'}$ is the normalization of $\OO_S$ in $p_* \OO_{S'}$. Though $p$ is not universally closed, it is closed because it is surjective and $S'$ is irreducible. 
+\Leo{Is this right? Need irreducible assumption, otherwise $S' = \Aff^1 \sqcup \GG_m$ mapping to $\Aff^1$ is not closed.}
+\Leo{Do we need closed?}
+
+
+
+
+
+
+\begin{definition}
+	
+	The Weil restriction $\WR_{S'/S, X}$ is the sheaf on $S$-schemes $T$ whose value is the set of maps $\theta$ making the triangle commute:
+	\begin{equation}\label{eqn:weilrestn}
+		\begin{tikzcd}
+			T \times_S S' \ar[rr, dashed, "\theta"] \ar[dr] 		&		&X \ar[dl] 		\\
+			&T.
+		\end{tikzcd}
+	\end{equation}
+	The subpresheaf $\Gen_{S'/S, X} \subseteq \WR_{S'/S, X}$ is given by triangles \eqref{eqn:weilrestn} such that $\theta$ is a closed immersion. 
+	
+\end{definition}
+
+
+
+
+
+
+\begin{lemma}
+
+Let $S' \subseteq \bar S'$ be a dense open inclusion of one-dimensional varieties mapping to $S$ and $X \to S$ a proper map. Let $T \to S$ be a morphism and write $T' \subseteq \bar T'$ and $X_T$ for the pullback of $S' \subseteq \bar S'$ and $X$ to $T$. 
+
+If $T \to S$ is \'etale, the maps to $X_T$ coincide via restriction
+\[\Hom_T(\bar T', X_T) \longsimeq \Hom_T(T', X_T).\]
+
+\end{lemma}
+
+\begin{proof}
+
+Because $T \to S$ is \'etale, $T' \subseteq \bar T'$ is again a dense open inclusion of one-dimensional varieties. It is the complement of finitely many points, and a map $T' \to X_T$ is uniquely extended to $\bar T'$ using the valuative criterion for properness. 
+
+
+\end{proof}
+
+
+\begin{corollary}
+
+The map on Weil restrictions
+\begin{equation}\label{eqn:weilrestnrestn}
+	\WR_{\bar S'/S, X} \to \WR_{S'/S, X}
+\end{equation}
+becomes an isomorphism \emph{after} restriction to the small \'etale site of $S$. 
+
+\end{corollary}
+
+
+
+\begin{remark}
+
+The restriction map \eqref{eqn:weilrestnrestn} is not an isomorphism of presheaves on all schemes. Take $S' = \GG_m \sqcup \Aff^1$ with the disjoint union of the natural maps to $S = \Aff^1$. If $T \to S$ is the inclusion of the origin, $T' \subseteq \bar T'$ is the inclusion of one point into two. The restriction \eqref{eqn:weilrestnrestn} restricts over $T$ to the projection map
+\[X^2 \to X.\] 
+
+\end{remark}
+
+
+Suppose given a map $u : S' \to \PP^n$, for example the universal map on the Weil restriction. The locus in $S$ where $u$ factors through $\Aff^n$ is open because $p$ is closed, so the Weil restriction of $\Aff^n$ is also representable
+\[\WR_{S'/S, \Aff^n} \subseteq \WR_{S'/S, \PP^n}.\]
+
+\begin{remark}
+
+This is also essentially what log maps $\bar S' \to \PP^n$ look like, where $\PP^n$ is given log structure with only the hyperplane at infinity as divisor. But there's an added contact order. Lots of log structures in the background here. 
+
+\end{remark}
+
+
+
+
+\subsection{The subscheme $\Gen_n \subseteq \WR_{S'/S, \Aff^n}$}
+
+
+\begin{definition}
+
+The subpresheaf $\Gen_n \subseteq \WR_{S'/S, \Aff^n}$ consists of points \eqref{eqn:weilrestn} such that $\theta$ is a closed immersion. 
+
+\end{definition}
+
+
+
+
+
+So we can suppose given a map $u : S' \to \Aff^n_S$ and we want to determine the locus in $S$ where $u$ is a closed immersion. This is not the same as the locus where $\bar S'$ has a closed immersion into $\Aff^n$: 
+
+\begin{example}
+
+The map
+\[\ZZ[x] \to \ZZ \bra{\dfrac{1}{2}} = \ZZ[x]/(2x-1), \qquad x \mapsto \dfrac{1}{2}\]
+does not factor through $\OO_S = \ZZ$. 
+\Leo{But it does if you extend to $\PP^1$}
+
+
+\end{example}
+	
+
+Because $S' \subseteq \bar S'$ is an open immersion into a smooth dimension-one variety, it is the complement of finitely many points. Choose uniformizers $f_i$ at each of the points $q_i$ and write $f = \prod f_i$ so that
+\[S' = D(f) \subseteq \bar S', \qquad \OO_{S'} = \OO_{\bar S'}\bra{\dfrac{1}{f}}.\]
+Write $v_i : \OO_{\bar S'} \to \OO_{\bar S', (q_i)} \to \ZZ$ for the $f_i$-adic valuations and $v = \min v_i$. 
+\Leo{No! Don't work with the min, not a valuation anymore}
+
+
+We have a filtration on $\OO_{S'}$ given by
+\[\OO_{S'}^{\geq -k} \coloneqq \{g \in \OO_{S'} \, | \, \forall i, \, v_i(g) \geq -k\} \quad \subseteq \OO_{S'}.\]
+Presenting $\OO_{S'} = \OO_{\bar S'}\bra{\dfrac{1}{f}}$ as the sequential colimit
+\[\colim\left(\cdots \to \OO_{\bar S'} \overset{\cdot f}{\longrightarrow} \OO_{\bar S'} \to \cdots\right)\]
+of multiplication by $f$, the $\OO_S$-module $\OO_{S'}^{\geq -k}$ is isomorphic to the $k$th copy of $\OO_{\bar S'}$
+\[\OO_{S'}^{\geq -k} = \OO_{\bar S'} \dfrac{1}{f^k}.\]
+
+
+
+The map $u : S' \to \Aff^n_S$ is the spectrum of a map
+\[u^\sharp : \OO_S[\vec x] = \OO_S[x_1, \cdots, x_n] \to \OO_{S'}.\]
+We want to determine when $u^\sharp$ is surjective. 
+\Leo{Localize in $S$ here to obtain a basis $\OO_{\bar S'} = \OO_S^n$ for convenience.}
+If these were finite locally free $\OO_S$-modules, we would take the determinants of the minors of a matrix for $u^\sharp$ to get a locus where $u^\sharp$ is full rank \cite{monogeneity}. Unfortunately, neither are finite. 
+
+
+
+
+
+\Leo{The subset $\dfrac{1}{f} \OO_{\bar S'}$ generates $\OO_{S'}$ as a ring. It suffices to show the map to $\dfrac{1}{f} \OO_{\bar S'}$ is surjective! This makes the whole thing much simpler and shows it is represented by an open. }
+
+
+
+
+
+
+
+
+Write $\OO_S[\vec x]^{\geq -k}$ for the pullback of the filtration $\OO_{S'}^{\geq -k} \subseteq \OO_{S'}$ and $v, v_i$ for the restrictions of the valuations $v(u^\sharp -), v_i(u^\sharp)$. Suppose $v(x_i) < 0$ for some $x_i$. There can be no monic relations among the powers of $x_i$ because they live in different graded pieces: rearrange
+\[x_i^n + a_1 x_i^{n-1} + \cdots + a_n = 0\]
+as
+\[x_i^n = -a_1 x_i^{n-1} - \cdots - a_n\]
+and note the valuation $v$ of the right hand side is strictly greater than that of the left. So there is no monic minimal polynomial for $x_i$. 
+
+If $v(x_i) \geq 0$, then it lands in $\OO_{\bar S'} \subseteq \OO_{S'}$ and $u^\sharp x_i$ satisfies a unique monic minimal polynomial $m_i(u^\sharp x_i) = 0$ by the usual argument \cite{}. For all $i$, write $m_i(x_i)$ either for this monic minimal polynomial or zero, depending on whether $v(x_i)$ is negative or not. 
+
+
+
+\begin{proposition}
+	The map $u_k$ is surjective on an open subscheme. The subfunctor $\Gen \subseteq \WR$ is open. 
+\end{proposition}
+
+
+\begin{proof}
+	The map $u_k$ is a map of $\OO_S$-modules. It is surjective when its cokernel $C_k$ vanishes: 
+	\[
+	\OO_{S'}^{\geq -k} \to \dfrac{1}{f^k} \OO_{\bar S'} \to C_k \to 0.	
+	\]
+	The cokernel $C_k$ is a finite type, quasicoherent $\OO_S$ module. Then \cite[056J]{stacks} shows its support $\supp C_k$ is closed. 
+	
+	The locus $\Gen \subseteq \WR$ is the locus where $u^\#$ is surjective. The open complement $\WR \setminus \supp C_k$ is the locus where $u_k$ is surjective. But note that $u^\#$ is surjective if and only if $u_1$ is, so $\Gen \subseteq \WR$ is the open complement $\WR \setminus \supp C_1$ and we are done. 
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+The map $u^\sharp$ factors through the quotient
+\[u^\sharp : R \coloneqq \dfrac{\OO_S[\vec x]}{m_i(x_i)} \to \OO_{S'}.\]
+Write $R^{\geq -k}$ for the induced filtration on the quotient
+\[R^{\geq -k} \coloneqq \dfrac{\OO_S[\vec x]^{\geq -k}}{m_i(x_i)} \subseteq R\]
+and $u_k$ for the map $u^\sharp$ restricted to the $\geq -k$ filtered pieces. 
+
+
+\begin{lemma}
+
+If a map $u_{k+1}$ is injective or surjective, then $u_k$ is as well. 
+
+\end{lemma}
+
+\begin{proof}
+
+Omitted. 
+
+\end{proof}
+
+
+Even though $u^\sharp : R \to \OO_{S'}$ is a map of $\OO_S$ modules of infinite rank, the filtered pieces
+\[u_k : R^{\geq -k} \to \OO_{S'}^{\geq -k}\]
+are locally free modules. 
+\Leo{The source has potentially infinite rank. But it doesn't matter. In fact it makes the $v$ argument below with the diagonal unnecessary.}
+
+\begin{lemma}
+
+The filtered piece $R^{\geq -k}$ is locally free as an $\OO_S$-module. 
+
+\end{lemma}
+
+\begin{proof}
+
+Trivialize $\OO_{\bar S'} = \OO_S^{\oplus n}$. A basis for $R^{\geq -k}$ is given by monomials $a_I x^I$ ranging over multi\"indices $I$, where $a_I$ are particular coefficients we now describe. 
+
+Each $v_j(a_I)$ is minimal such that
+\[v_j(a_I) + k \geq \sum v_j(x_i^{e_i}).\]
+If $\sum v_j(x_i^{e_i}) - k$ is $\leq 0$, $a_I$ is not divisible by $f_j$. Otherwise, its $f_j$-adic valuation $v_j(a_I)$ is exactly $\sum v_j(x_i^{e_i}) - k$. 
+
+Then $a_I$ is given by the product of $f_j$'s to the appropriate powers to ensure the correct valuations above. 
+
+
+\end{proof}
+
+
+
+
+
+
+Let $I_k$ be the ideal generated by the $s \times s$ minors of a local matrix for $u_k$, where $s$ is the minimum of the ranks of $R^{\geq -k}, \OO_{S'}^{\geq -k}$. The closed subscheme $V(I_k) \subseteq S$ is the locus where $u_k$ is not of full rank. By Lemma \ref{}, these closed subschemes form an increasing chain
+\[V(I_k) \subseteq V(I_{k+1}) \subseteq \cdots, \qquad I_k \supseteq I_{k+1} \supseteq \cdots.\]
+Let $\frak N$ be the colimit of these closed subschemes, an ind-subscheme of $S$ where $u^\sharp$ ``drops rank.''
+
+
+The complement of $\frak N$ in $S$ is the locus where $u^\sharp$ is of full rank, where each $u_k$ is either injective or surjective. We want to determine where the maps $u^\sharp, u_k$ are \emph{surjective}. Let $v : S' \to \Aff^n_S \to \Aff^{2n}_S$ be the composite of $u$ with the diagonal map, so
+\[v^\sharp : \OO_S[\vec x^1, \vec x^2] \to \OO_{S'}; \qquad v^\sharp(x_i^j) = u^\sharp(x_i).\]
+If $u^\sharp$ was surjective, so is $v^\sharp$; if $u^\sharp$ was injective and $n \neq 0$, $v^\sharp$ is not. The locus where $u^\sharp$ is surjective is the intersection of the loci where $u^\sharp, v^\sharp$ are full rank determined above. 
+
+\begin{proposition}
+
+Take $n \geq 1$. \emph{After} restriction to the small \'etale site of $S$, the locus $\Gen_n \subseteq \WR_{S'/S, \Aff^n}$ where $S' \to \Aff^n$ is a closed immersion is representable by an infinite intersection of open subschemes, a ``$G_\delta$.'' 
+
+\end{proposition}
+
+Every sheaf on the small \'etale site is representable, up to set-theoretic considerations. But the representative constructed in that way is ``flat,'' very different from the object we consider. The analogy is replacing the scheme $\GG_m$ by an \'etale sheaf over $S$ obtained from gluing sections of $\GG_m$ locally over $S$. The latter has vanishing tangent space over $S$, unlike $\GG_m$. 
+\Leo{Our theorem is significant because we describe an object of the big site which restricts to this object on the small site. Also proves that it is an \'etale sheaf in the first place}
+
+
+\begin{proof}
+
+Write $I_k$ for the ideals cutting out the locus where $u_k$ is not full rank as above; write $J_k$ for those where $v_k$ is not full rank. The locus $\Gen_n$ is the intersection of the complements $D(I_k) \cap D(J_k)$ of the vanishing sets. 
+
+\Leo{Maybe you can take finitely many?! The full rank question is ``periodic:'' if it's true up to $k = \lcm(v_i(x_j))$'s, then it's true in general}
+
+\end{proof}
+
+
+\begin{corollary}
+
+The presheaves $\Gen_{S'/S, \Aff^n} \subseteq \WR_{S'/S, \Aff^n}$ are \'etale sheaves on the small site of $S$. 
+
+\end{corollary}
+
+It does not follow that they are fppf or fpqc sheaves on $S$ because we only know we have the correct object $\Gen_{S'/S, \Aff^n}$ after restricting to the small \'etale site of $S$. 
+
+
+\begin{question}
+
+Is $\Gen_n \subseteq \WR_{S'/S, \Aff^n}$ in fact representable by an open subscheme? 
+
+\end{question}
+
+
+
+\begin{example}
+
+Consider a map
+\[u^\sharp : \ZZ[x] \to \ZZ\bra{\dfrac{1}{2}}, \qquad x \mapsto \dfrac{r}{2^t}, \quad r\text{ odd}.\]
+If $t = 0$, the 2-adic valuation is nonnegative $v(x) \geq 0$ and none of the maps 
+\[u_k : \ZZ[x] \to \ZZ\bra{\dfrac{1}{2}}^{\geq -k} = \dfrac{1}{2^k} \ZZ\]
+are surjective. The ideals $I_k$ are the unit ideals for $k \geq 1$. 
+
+If $t > 0$, the ``minimal polynomial'' $m(x) = 0$ is the zero polynomial. A polynomial $f(x)$ is in $\ZZ[x]^{\geq -k}$ if all its monomials $ax^i$ satisfy $v(a) - ti \geq -k$, so its degrees $i$ are bounded in terms of the $2$-adic valuations of the coefficients. This may be viewed as a free $\ZZ$-module with basis indexed by $i \in \NN$:
+\[2^{it-k}x^i \text{ if } it-k \geq 0, \qquad x^i \text{ if } ti < k\]
+\Leo{This is infinite! Still has well-defined minors. I think it's fine.}
+The map $u_k$ is represented by an infinite row matrix, and the $1 \times 1$ minors are simply its entries. 
+%The basis elements $2^{it-k}x^i$ all get sent to $r$, so the ideal generated is exactly $(r)$. The infinite row matrix is just $[\cdots r \, r \, r \cdots]$.
+\Leo{This is not enough -- we are trying to describe polynomials with a certain valuation, which is not the same as linear combinations of monomials with that valuation because valuations are not additive. }
+
+\end{example}
+
+
+
+
+\begin{example}
+
+Let $n = 0$, $\OO_S = \ZZ$, and consider the inclusion
+\[u^\sharp : \ZZ = \ZZ[\varnothing] \to \ZZ\bra{\dfrac{1}{2}}.\]
+Each $u_k$ is injective, so of full rank. The diagonal map $v^\sharp$ coincides with $u^\sharp$, so it is also of full rank. Nevertheless, neither are surjective. 
+
+There are similar examples for $n \geq 1$:
+\[u^\sharp : \ZZ[x] \to \ZZ\bra{x, \dfrac{1}{2}}/x^2.\]
+The minimal polynomial is $m(x) = x^2$, and all the maps
+\[R = \ZZ[x]/x^2 \to \ZZ\bra{x, \dfrac{1}{2}}/x^2\]
+are injective. But the diagonal 
+\[v^\sharp : R \otimes_{\OO_S} R = \ZZ[x^1, x^2] \to \ZZ\bra{x, \dfrac{1}{2}}/x^2; \qquad x^1, x^2 \mapsto x\]
+is no longer of full rank. 
+
+\end{example}
+
+
+
+\begin{remark}
+
+The filtrations $-^{\geq k}$ are valuative ideals. It may be interesting to add roots, so the valuation is rational. This corresponds to taking the infinite root stack at $V(f) \subseteq \bar S'$, essentially replacing it by the smallest proper compactification of $S'$. In this case, the infinite root stack and divisible valuation space coincide
+\[\sqrt[\infty]{\bar S'} = {\bar S'}^{\infty val}\]
+because $\bar S'$ is valuative. 
+
+
+\end{remark}
+
+
+
+\bibliographystyle{alpha}%Used BibTeX style is unsrt
+\bibliography{zbib}
+
+
+\end{document}

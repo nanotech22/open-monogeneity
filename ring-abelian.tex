@@ -1,0 +1,597 @@
+\documentclass[11pt,reqno]{amsart}
+%\newlength\tindent
+%\setlength{\tindent}{\parindent}
+%\setlength{\parindent}{0pt}
+%\renewcommand{\indent}{\hspace*{\tindent} \bigskip}
+
+\usepackage{setspace}
+\usepackage[margin=1in]{geometry}
+\usepackage[hang,flushmargin,symbol*]{footmisc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage[labelformat=simple,labelfont={}]{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows,shapes,positioning}
+\usetikzlibrary{patterns}
+\usepackage{url}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{mathrsfs}
+
+\usepackage{verbatim}
+
+\usepackage{subfiles}
+
+
+\usepackage[colorinlistoftodos, loadshadowlibrary]{todonotes}
+%\usepackage[disable]{todonotes}
+
+\setlength{\marginparwidth}{.8in}
+
+\usepackage{dashbox}
+\newcommand\dboxed[1]{\dbox{\ensuremath{#1}}}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{answer}[theorem]{Answer}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{situation}[theorem]{Situation}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{desiderata}[theorem]{Desiderata}
+\newtheorem{warning}[theorem]{Warning}
+
+
+
+
+
+
+%\newtheorem{case}[theorem]{Case}
+
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{hyperref}
+\usepackage{ mathdots }
+\usepackage{dutchcal}
+\usepackage{verbatim}
+\usepackage{amsmath,amsthm}
+\usepackage{extarrows}
+
+%Lets me use if then statements and create separate moduli of curves commands for if there is or is no input
+\usepackage{xparse}
+
+
+
+\newcommand{\BFjet}[1]{J^{BF}_{#1}}
+
+
+
+%Comment out this package to make labels invisible
+\usepackage{showlabels}
+
+\usepackage{multirow}
+\usepackage{multicol}
+
+%strikethrough text
+\usepackage[normalem]{ulem}
+%strikethrough underlines in math mode unless you do this stupid modification:
+
+
+
+\newcommand{\scr}[1]{\ensuremath{\mathscr{#1}}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newcommand{\msout}[1]{\text{\sout{\ensuremath{#1}}}}
+
+
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\NN}{{\mathbb{N}}}
+\newcommand{\QQ}{{\mathbb{Q}}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\MM}{{M}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Aff}{{\mathbb{A}}}
+\newcommand{\PP}{\mathbb{P}}
+
+\newcommand{\GG}{\mathbb{G}}
+
+\newcommand{\Gtrop}{\GG_{trop}}
+\newcommand{\Glog}{\GG_{log}}
+
+\newcommand{\fanskel}[1]{{\text{Sk}^{#1}}}
+
+\newcommand{\nn}[1]{{\mathscr{N}_{#1}}}
+\newcommand{\N}[1]{{N_{#1}}}
+\newcommand{\Nl}[1]{{N_{#1}^{\ell}}}
+\newcommand{\Nlstrict}[1]{{N_{#1}^{\msout{\ell}}}}
+
+\newcommand{\Div}{{\text{Div}}}
+
+
+\newcommand{\inc}{\rm inc}
+\newcommand{\ft}{\rm ft}
+
+\newcommand{\lHD}{{\rm HD}^\ell}
+
+
+
+
+
+\newcommand{\Spec}{{\rm{Spec}\:}}
+\newcommand{\SSpec}[1]{{\underline{\rm{Spec}}_{#1}\:}}
+\newcommand{\Proj}{{{\rmProj}\:}}
+\newcommand{\PProj}{\underline{\text{Proj}}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\HHom}{\underline{{\rm Hom}}}
+\newcommand{\lHHom}{\underline{\text{Hom}}^\ell}
+\newcommand{\Isom}{\text{Isom}}
+\newcommand{\IIsom}{\underline{\text{Isom}}}
+\newcommand{\EExt}{\underline{\text{Ext}}}
+\newcommand{\TTor}{\text{Tor}}
+\newcommand{\Der}{\text{Der}}
+\newcommand{\Exal}{\text{Exal}}
+\newcommand{\Ext}{\text{Ext}}
+\newcommand{\Mext}{\text{MExt}}
+\newcommand{\hh}[1]{\mathcal{h}_{#1}}
+\newcommand{\vH}{\check{H}}
+\newcommand{\inpt}{{\underline{\phantom{ab}}}}
+\newcommand{\ccx}[1]{{\mathbb{L}_{#1}}}
+\newcommand{\ccxd}[1]{{\mathbb{L}^\Delta_{#1}}}
+\newcommand{\lccx}[1]{{\mathbb{L}^\ell_{#1}}}
+\newcommand{\lgabcx}[1]{{\mathbb{L}^G_{#1}}}
+
+\newcommand{\Con}[1]{\text{Const}_{#1}}
+
+\newcommand{\gp}[1]{#1^{\rm gp}}
+\newcommand{\vfc}[2]{ {[{#1}, {#2}]^{vir}} }
+\newcommand{\lvfc}[2]{ {[{#1}, {#2}]^{\ell vir}} }
+
+\newcommand{\glob}{\mathcal{V}}
+\newcommand{\rectglob}{\mathcal{W}}
+
+
+
+\newcommand{\ev}{\hat \wedge}
+
+
+
+\def\lcm{\operatorname{lcm}}
+
+\newcommand{\Cl}[1]{{C_{#1}^\ell}}
+\newcommand{\Clstrict}[1]{{C_{#1}^{\msout{\ell}}}}
+\newcommand{\C}[1]{C_{#1}}
+
+\newcommand{\DNC}[1]{{\widetilde{M}_{#1}}}
+
+\newcommand{\Tl}[1]{{T^{\ell}_{#1}}}
+\newcommand{\lkah}[1]{\Omega^\ell_{#1}}
+\newcommand{\kah}[1]{\Omega_{#1}}
+\newcommand{\Log}{{\mathcal{L}og}}
+\newcommand{\Tor}{{\mathscr{T}}}
+\newcommand{\lpb}{{\arrow[dr, phantom, very near start, "\ulcorner \ell"]}}
+\newcommand{\lpbstrict}{{\arrow[dr, phantom, very near start, "\ulcorner \msout{\ell}"]}}
+\newcommand{\pb}{{\arrow[dr, phantom, very near start, "\ulcorner"]}}
+
+\newcommand{\num}[1]{\langle #1 \rangle}
+
+%fixing tilde and hat
+\renewcommand{\tilde}[1]{\widetilde{#1}}
+\renewcommand{\hat}[1]{\widehat{#1}}
+
+
+\newcommand{\stquot}[1]{\left[ #1 \right]}
+
+
+\newcommand{\lct}{{\rm lct}}
+
+
+
+
+\def\overnorm#1{\overline{#1}\vphantom{#1}}
+
+\renewcommand{\bar}[1]{\ensuremath{\overnorm{#1}}}
+
+\newcommand{\Ms}{{\overline{M}_{g, n}}}
+\newcommand{\Msi}[1]{{\overline{M}_{g, n} (#1)}}
+\newcommand{\Msg}[1]{{\overline{M}_{\Gamma} (#1)}}
+%to make $M_{g, n+m}$ look good
+\newcommand{\Msp}[1]{{\overline{M}_{g, n+#1}}}
+\newcommand{\Mspecific}[1]{\overline{M}_{#1}}
+
+\newcommand{\Ml}{{\mathscr{M}^\ell_{g, n}}}
+\newcommand{\Mli}[1]{{\mathscr{M}^\ell_{g, n} (#1)}}
+\newcommand{\Mlg}[1]{{\mathscr{M}^\ell_{\Gamma} (#1)}}
+
+
+\newcommand{\point}{{\overline{o}}}
+
+
+
+\newcommand{\Mprel}{{\mathfrak{M}_{g, n}}}
+
+
+\newcommand{\Aut}{\underline{\text{Aut}}}
+
+
+\newcommand{\Tc}{{\mathscr{T}}}
+
+
+
+\newcommand{\val}[1]{{#1}^{val}}
+\newcommand{\rval}[1]{{#1}^{\infty val}}
+
+\newcommand{\CDiv}[1]{\text{CDiv}(#1)}
+\newcommand{\WDiv}[1]{\text{WDiv}(#1)}
+
+\newcommand{\lCDiv}[1]{\text{CDiv}^\ell(#1)}
+\newcommand{\lWDiv}[1]{\text{WDiv}^\ell(#1)}
+
+
+\def\Cone{\operatorname{Cone}}
+
+\newcommand{\WP}{\cal{WP}}
+\newcommand{\WE}{\cal{WE}}
+
+
+
+\newcommand{\UU}{{\mathcal{U}}}
+\newcommand{\UUU}{{\widetilde{\mathcal{U}}}}
+
+\newcommand{\Sym}{\text{Sym}\,}
+
+\newcommand{\DS}[1]{P_{#1}}
+
+
+\newcommand{\longequals}{\xlongequal{\: \:}}
+\newcommand{\coker}{\text{coker}}
+\newcommand{\action}{\:\rotatebox[origin=c]{-90}{$\circlearrowright$}\:}
+\newcommand{\Split}{\text{Split}}
+\newcommand{\colim}{\text{colim}}
+\newcommand{\et}{{\text{\'et}}}
+
+%commands in case jonathan doesn't like my terminology
+\newcommand{\lpot}{{Log POT}\,}
+\newcommand{\lvirt}{{Log VFC}\,}
+
+
+%brackets
+\usepackage{stmaryrd}
+\newcommand{\adj}[1]{\llbracket #1 \rrbracket}
+
+
+
+%jets and log jets
+\newcommand{\ljet}[2]{\Delta_{#2}^{(#1)}}
+\newcommand{\tljet}[2]{\scr D_{#2}^{(#1)}}
+\newcommand{\jet}[1]{\Delta_{#1}}
+
+%(log) Jet Spaces
+\newcommand{\ljsp}[2]{J^{(#1)}_{#2}}
+\newcommand{\tljsp}[2]{\scr J^{(#1)}_{#2}}
+\newcommand{\ljspnonfs}[2]{S^{(#1)}_{#2}}
+\newcommand{\jsp}[1]{J_{#1}}
+\newcommand{\tjsp}[1]{\scr J_{#1}}
+
+\newcommand{\FF}{\mathbb F}
+
+\newcommand{\usch}[1]{{#1}^\circ}
+
+\newcommand{\WR}{\cal R}
+\newcommand{\WRc}{\hat{\cal R}}
+\newcommand{\Gen}{\cal M}
+
+
+
+\newcommand{\smet}{\Acute{e}t}
+
+\newcommand{\bra}[1]{\left[{#1}\right]}
+
+
+
+\usepackage{bm}
+\usepackage{xspace}
+%Names for different log structures on log jets
+%don't use this -- it's deprecated. Just use DIV with a number
+\newcommand{\BF}{\ensuremath{\boldsymbol{BF}}\xspace}
+\newcommand{\HOL}{\ensuremath{\boldsymbol{HOL}}\xspace}
+\newcommand{\DIV}[1]{\ensuremath{\boldsymbol{DIV}_{#1}}\xspace}
+
+
+\newcommand{\AF}[1][{}]{\Theta_{{#1}}}
+\newcommand{\af}[1][{}]{\AF[#1]}
+
+
+
+\newcommand{\cal}[1]{\ensuremath{\mathcal{#1}}}
+
+
+\newcommand{\pt}{\Spec k}
+
+\newcommand{\VV}{\mathbb{V}}
+
+\newcommand{\bb}[1]{\ensuremath{\mathbb{#1}}}
+
+\newcommand{\rk}{{\rm rk}}
+
+
+\newcommand{\dobib}{
+\onlyinsubfile{
+\bibliographystyle{alpha}%Used BibTeX style is unsrt
+\bibliography{zbib}}}
+
+
+
+
+\newcommand{\klvar}[1]{K^{log}_0({\rm Var}_{#1})}
+\newcommand{\ktropvar}[1]{K^{trop}_0({\rm Var}_{#1})}
+\newcommand{\otherklvar}[1]{K_0({\rm Log}_{#1})}
+
+
+\newcommand{\klbitt}[1]{K^{log Bitt}_0({\rm Var}_{#1})}
+
+
+\newcommand{\ordkvar}[1]{K_0({\rm Var}_{#1})}
+
+
+\newcommand{\LL}{\mathbb{L}}
+
+\newcommand{\Cones}{(Cones)}
+\newcommand{\Mons}{(Mon)}
+\newcommand{\longsimeq}{\overset{\sim}{\longrightarrow}}
+
+\newcommand{\HS}{{\rm HS}}
+
+\newcommand{\jl}[2]{#1_{#2}^\ell}
+
+
+
+\newcommand{\Leo}[2][inline]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1,shadow,author=Leo]{#2}} %Todo notes for LEO. 
+
+\newcommand{\TdF}[2][inline]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1,shadow,author=Tommaso]{#2}} %Todo notes for Tommaso. 
+
+\newcommand{\End}{{\rm End}}
+
+\newcommand{\KN}[1]{#1^{KN}}
+
+
+\newcommand{\lmu}{\mu^\ell}
+
+\title{Title}
+\author{Everybody}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+
+Let $R$ be a ring, and write $R_{\ZZ}$ for its underlying abelian group. Each $r \in R$ induces an endomorphism
+\[\cdot r : R_\ZZ \to R_\ZZ; \qquad s \mapsto sr\]
+by multiplication. This gives a ring map
+\begin{equation}\label{eqn:psiringabelianZ}
+	\Psi : R \to \End(R_\ZZ),
+\end{equation}
+where $\End(R_\ZZ) \coloneqq \Hom_{\rm ab}(R_\ZZ, R_\ZZ)$ is the ring of endomorphisms of $R_\ZZ$ as an abelian group. The map $\Psi$ is always injective, as the image of $1 \in R_\ZZ$ distinguishes elements of $R$. 
+
+
+\begin{question}[H. Lenstra]\label{q:lenstra}
+
+When is $\Psi$ also surjective?
+
+\end{question}
+
+
+Such rings are present in the literature as ``E-rings'' \url{https://arxiv.org/pdf/math/0404271.pdf}. 
+
+We generalize the map $\Psi$.
+
+Let $S \to R$ be a map of rings and write $R_S$ for $R$ regarded as an $S$-module. We similarly obtain a map
+\begin{equation}\label{eqn:ringabelian}
+\Psi : R \to \End(R_S); \qquad r \mapsto \cdot r.
+\end{equation}
+Endomorphisms are $S$-module maps $\Hom_S(R, R)$, which are equated with $R$-module maps
+\[\Hom_S(R, R) \simeq \Hom_R(R \otimes_S R, R)\]
+via tensor-hom adjunction. The map
+\[\Psi : R \to \End(R_S)\]
+is dual to the multiplication map $R \otimes_S R \to R$:
+\[\Psi : R \simeq \Hom_R(R, R) \to \Hom_R(R \otimes_S R, R).\]
+
+\begin{remark}
+
+If $S = \ZZ$, this reproduces the $\Psi$ above. If $S \to R$ is an epimorphism, $R \otimes_S R = R$ and $\Psi$ is an isomorphism. 
+
+
+\end{remark}
+
+
+
+Write $I \coloneqq \ker(R \otimes_S R \to R)$ for the kernel of the multiplication map. Fix a morphism $\varphi : R \otimes_S R \to R$ in $\Hom_R(R \otimes_S R, R)$. The map $\varphi$ comes from a map $R \to R$ if and only if the restriction to the ideal is zero:
+\[
+\begin{tikzcd}
+0 \ar[r] 	&I \ar[dr] \ar[r] 		&R \otimes_S R \ar[d, "\varphi"] \ar[r] 		&R \ar[r] \ar[dl, dashed, "\exists"] 		&0 		\\
+		&&R
+\end{tikzcd}
+\]
+
+We give a tautological answer to Question \ref{q:lenstra} before elaborating. 
+
+\begin{answer}
+
+The map $\Psi$ of \eqref{eqn:ringabelian} is surjective if and only if, for all maps $\varphi : R \otimes_S R \to R$, the restriction $\varphi|_I$ is zero. 
+
+\end{answer}
+
+
+
+
+
+The map $R \otimes_S R \to R$ has kernel $I$ generated by 
+The kernel $I$ of the map $R \otimes_S R \to R$ is generated by 
+\[(r_1 r_2 \otimes r_3 - r_1 \otimes r_2 r_3 \, | \, r_1, r_2, r_3 \in R) \quad \subseteq R \otimes_S R.\] 
+This is because modding out $R \otimes_S R$ by such a relation yields $R \otimes_R R = R$. There is a surjection
+\[R^{\otimes_s^3} \to I; \qquad r_1 \otimes r_2 \otimes r_3 \mapsto r_1 r_2 \otimes r_3 - r_1 \otimes r_2 r_3.\]
+This is the differential in the normalized bar resolution. A map $\varphi : R \otimes_S R \to R$ comes from a map $f : R \to R$ if and only if 
+\begin{equation}\label{eqn:tensorprodrelns}
+\varphi(r_1r_2, r_3) = \varphi(r_1, r_2 r_3), \qquad r_1, r_2, r_3 \in R.
+\end{equation}
+
+
+
+By \cite[0BSZ]{stacks-project}, the dualizing sheaf of the diagonal $R \otimes_S R \to R$ is the hom-set
+\Leo{This is otherwise known as $T_{R/S}$!}
+\[\Hom_R(R \otimes_S R, R) = \omega_{R/R \otimes_S R}.\]
+This dualizing sheaf has a canonical section $\tau \in \omega$ given by the multiplication map. The map $\Psi$ of \eqref{} is surjective if and only if $\tau \in \omega$ generates $\omega$ as an $R$-module. 
+
+There is a universal open locus in $\Spec R$ on which $\tau \in \omega$ generates it as an $R$-module: let $D \subseteq \Spec R$ be the support of the cokernel of 
+\[\OO_{\Spec R} \to \omega; \qquad 1 \mapsto \tau.\]
+The subscheme $D$ is closed, as the cokernel is a coherent sheaf, and the open locus is just the complement $\Spec R \setminus D$. 
+
+One can further stratify ``how far away'' $R$ is from being an $E$-ring over $S$ by taking the Fitting-ideal locally closed stratification on which $\omega$ needs a certain number of generators:
+\[X = \Spec R = X_0 \sqcup X_1 \sqcup X_2 \cdots .\]
+
+The element $\tau \in \omega$ only has a hope of generating if $\omega$ locally can be generated by $\leq 1$ element, so the $E$-ring locus is contained in $X_0 \sqcup X_1$. 
+
+\begin{remark}
+	
+This is analogous to the trace pairing being nondegenerate precisely when an extension or order is \'etale. In that case, the trace pairing is another canonical element $\tau \in \omega$ in the dualizing sheaf of the order, and it vanishes along the discriminant. This is only an analogy, as no such trace pairing can be constructed for the diagonal. 
+
+\end{remark}
+
+
+We can express the condition \eqref{eqn:tensorprodrelns} in these terms. Write 
+\[\omega_2 \coloneqq \Hom_R(R \otimes_S R, R), \qquad \omega_3 \coloneqq \Hom_R(R^{\otimes_S 3}, R)\]
+for the dualizing sheaves of the diagonal and triple diagonal. Pulling back along the differential
+\[d : R^{\otimes_S 3} \to R^{\otimes_S 2}; \qquad r_1 \otimes r_2 \otimes r_3 \mapsto r_1 r_2 \otimes r_3 - r_1 \otimes r_2 r_3\]
+gives a map $d^* : \omega_2 \to \omega_3$. The kernel of this map is $R$
+\[0 \to R \overset{\tau}{\longrightarrow} \omega_2 \overset{d^*}{\longrightarrow} \omega_3.\]
+The inclusion of $R$ is the canonical map $\tau$. 
+
+
+\subsubsection{For schemes}
+
+
+Taking $X = \Spec R$ over $Y = \Spec S$, the question of whether $R$ is an $E$-ring over $S$ is a question about modules on the diagonal
+\[\delta : X \to X \times_Y X.\]
+
+For a general map of schemes $f : X \to Y$, the multiplication map
+\[\OO_X \otimes_{f^{-1}\OO_Y} \OO_X \to \OO_X\]
+gives rise to a canonical element $\tau \in \omega_{X/X \times_Y X}$ in a canonical coherent sheaf on $X$. There is again a universal open inside $X$ on which it is an $E$-ring over $Y$. 
+
+
+
+
+\subsection{Log version}
+
+In log geometry, the diagonal $X \times_Y X$ is different -- fiber products of log schemes are different from those of underlying schemes. It is easier to be a log $E$-ring in general than simply an $E$-ring. Examples include blowups at strata. 
+
+
+
+
+
+
+
+\subsubsection{failed hochschild stuff}
+
+Commented out. 
+
+\begin{comment}
+
+Write $R^{\otimes_S n} = R \otimes_S \cdots \otimes_S R$ for the tensor product of $n$ copies of $R$ over $S$. There is an augmented simplicial object
+\[\cdots R^{\otimes_S 3} \rightrightarrows R^{\otimes_S 2} \to R\]
+called the bar resolution \cite[\S 8.6.12]{weibel}. Let $C_\bullet$ be the chain complex 
+\[C_\bullet : \qquad \cdots R^{\otimes_S 3} \to R^{\otimes_S 2} \to R,\]
+where the maps are alternating sums $\sum (-1)^k d_k$ of the face maps $d_k$. That is:
+\[C_k = R^{\otimes_S k+2}, \qquad d(r_0 \otimes \cdots \otimes r_{k+1}) \coloneqq \sum_{0 \leq i \leq k} (-1)^i r_0 \otimes \cdots \otimes r_i r_{i+1} \otimes \cdots \otimes r_{k+1}.\]
+\Leo{This chain complex is exact! That's the point of the bar resolution!}
+
+
+
+
+This is the bar resolution $B(R, R)$, not the Hochschild complex. The difference is
+\[HH(R, N) = B(R, R) \otimes_{R \otimes_S R^{\rm op}} N\] 
+if $N$ is a bimodule. Our rings are commutative, $R = R^{\rm op}$. So cohomology of the bar complex may be thought of as Hochschild of the free bimodule
+\[HH(R, R \otimes_S R) = B(R, R) \otimes_{R \otimes_S R} R \otimes_S R = B(R, R).\]
+
+
+
+Because $C_\bullet$ is a complex, any $f : R \to N$ restricts to a map $\varphi : R \otimes_S R \to N$ that restricts to zero on $R^{\otimes_S 3}$. In order for $\varphi$ to come from a map $f : R \to N$, it must be the case that
+\[\varphi|_{R^{\otimes_S 3}} = 0.\]
+I.e., $\varphi$ must be a Hochschild cocycle. 
+\Leo{This is automatic! The alternating sum map $R\otimes_S R \to R$ is the zero map! I'm off one degree somehow}
+\Leo{Not Hochschild! This is the bar construction}
+
+
+Supposing $\varphi$ is a Hochschild cocycle, it comes from a map $f : R \to N$ if and only if it is a boundary, or its class vanishes in Hochschild cohomology. 
+
+Recall that Hochschild homology $HH_*(R/S, R)$ in degree one is isomorphic to the K\"ahler differentials \cite[Proposition 9.2.2]{weibel}
+\[HH_1(R/S, R) \simeq \kah{R/S}\]
+and Hochschild cohomology is dually isomorphic to derivations
+\[HH^1(R/S, R) \simeq {\rm Der}_S(R, R).\]
+
+
+We summarize the above observations in an improved answer to Question \ref{q:lenstra}:
+
+\begin{answer}
+
+A map $\varphi : R \otimes_S R \to R$ is the restriction of a map $f : R \to R$ if and only if:
+\begin{itemize}
+\item 
+$\varphi$ is a Hochschild cocycle, i.e., 
+\[\varphi(ab, c) - \varphi(a, bc) = \]
+
+\end{itemize}
+
+
+\end{answer}
+
+
+
+
+
+\end{comment}
+
+
+
+
+
+\bibliographystyle{alpha}%Used BibTeX style is unsrt
+\bibliography{zbib}
+
+
+\end{document}
